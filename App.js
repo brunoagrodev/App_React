@@ -4,7 +4,11 @@ import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Estilos from './css/style'
-import {Br, Jur, Desconto, IdadeGestacional, ConversorMoedas, Etanol_Gasolina} from './screen/code'
+import {Br, Jur} from './screen/juros'
+import {Desconto} from './screen/desconto'
+import {IdadeGestacional} from './screen/idadeges'
+import {ConversorMoedas} from './screen/convermoeda'
+import {Etanol_Gasolina} from './screen/eta_gaso'
 
 
 function HomeScreen({ navigation }) {
