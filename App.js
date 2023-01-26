@@ -4,7 +4,7 @@ import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Estilos from './css/style'
-import {Br, Jur, Desconto, IdadeGestacional, ConversorMoedas} from './screen/code'
+import {Br, Jur, Desconto, IdadeGestacional, ConversorMoedas, Etanol_Gasolina} from './screen/code'
 
 
 function HomeScreen({ navigation }) {
@@ -30,6 +30,11 @@ function HomeScreen({ navigation }) {
         title="Conversor de Moedas"
         onPress={() => navigation.navigate('Conversor de Moedas')}
       />
+      <Br/>
+      <Button
+        title="Etanol ou Gasolina"
+        onPress={() => navigation.navigate('Etanol ou Gasolina')}
+      />
     </View>
   );
 }
@@ -44,6 +49,7 @@ export default function App() {
           <Stack.Screen name="Desconto" component={Desconto} options={{ title: 'Desconto'}} />
           <Stack.Screen name="Idade Gestacional" component={IdadeGestacional} options={{ title: 'Idade Gestacional'}} />
           <Stack.Screen name="Conversor de Moedas" component={ConversorMoedas} options={{ title: 'Conversor de Moedas'}} />
+          <Stack.Screen name="Etanol ou Gasolina" component={Etanol_Gasolina} options={{ title: 'Etanol ou Gasolina'}} />
         </Stack.Navigator>
       </NavigationContainer>
   );
