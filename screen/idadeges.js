@@ -8,7 +8,7 @@ export default function Idadegestacao(){
   const [idade, setIdade] = useState('');
 
   const calcularIdade = () => setIdade(dia_ultra >0 && dia_atual >0 ? 
-  (parseFloat(dia_atual) - parseFloat(dia_ultra))/7: 'Informe valores positivos diferentes de zero')
+  ((parseFloat(dia_atual) - parseFloat(dia_ultra))/7).toFixed(0): 'Informe valores positivos diferentes de zero')
 
   return (
     <View style={Estilos.container}>
