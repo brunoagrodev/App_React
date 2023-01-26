@@ -19,22 +19,22 @@ export function ConversorMoedas(){
   
   return(
     <View style={Styles.container}>
-      <Text style={Styles.paragraph,{}}>Conversor de Real para Euro ou Dolar</Text>
+      <Text style={Styles.paragraph,{}}>Conversor de Dolar para Real</Text>
       <SafeAreaView>
       <Br/>
       <TextInput
-        style={Styles.input, {textAlign: 'center'}}
+        style={Styles.input, {textAlign: 'center', width: 250}}
         onChangeText={val1=>setVal1(val1)}
         value={val1}
-        placeholder="Digite o valor em R$"
+        placeholder="Informe a quantidade de dólar: US$ "
         keyboardType="numeric"
       />
       <Br/>
       <TextInput
-        style={Styles.input, {textAlign: 'center'}}
+        style={Styles.input, {textAlign: 'center', width: 250}}
         onChangeText={val2=>setVal2(val2)}
         value={val2}
-        placeholder="Digite o valor em € ou $"
+        placeholder="Informe o valor da cotação do dólar: R$ "
         keyboardType="numeric"
       />
       <Br/>
@@ -47,8 +47,3 @@ export function ConversorMoedas(){
     </View>
   )
 }
-
-
-
-
-
