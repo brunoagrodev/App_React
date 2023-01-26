@@ -3,18 +3,18 @@ import { Text, View, StyleSheet, Button, ScrollView } from 'react-native';
 import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Estilos from './css/style'
+import Styles from './css/style'
 import {Br, Jur} from './screen/juros'
 import {Desconto} from './screen/desconto'
-import {IdadeGestacional} from './screen/idadeges'
+import IdadeGestacional from './screen/idadeges'
 import {ConversorMoedas} from './screen/convermoeda'
 import {Etanol_Gasolina} from './screen/eta_gaso'
 
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={Estilos.container}>
-      <Text style={Estilos.paragraph}>Funcionalidades</Text>
+    <View style={Styles.container}>
+      <Text style={Styles.paragraph}>Funcionalidades</Text>
       <Button
         title="Juros"
         onPress={() => navigation.navigate('Juros')}
