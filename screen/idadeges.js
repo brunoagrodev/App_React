@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Text, View, Button, TextInput } from 'react-native';
-import Estilos from '../estilos';
+import Styles from '../css/style';
 
 export default function Idadegestacao(){
   const [dia_ultra, setDiaUltra] = useState('');
@@ -11,22 +11,22 @@ export default function Idadegestacao(){
   ((parseFloat(dia_atual) - parseFloat(dia_ultra))/7).toFixed(0): 'Informe valores positivos diferentes de zero')
 
   return (
-    <View style={Estilos.container}>
-      <Text style={Estilos.paragraph}> Insira os dados abaixo para calcular a idade gestacional.</Text>
+    <View style={Styles.container}>
+      <Text style={Styles.paragraph}> Insira os dados abaixo para calcular a idade gestacional.</Text>
       <TextInput
         placeholder="Dia da ultrassonografia"
-        style={Estilos.paragraph} 
+        style={Styles.paragraph} 
         keyboardType={'numeric'}
         value={dia_ultra}
         onChangeText={dia_ultra=>setDiaUltra(dia_ultra)}/>
       <TextInput
         placeholder="Dia Atual"
-        style={Estilos.paragraph}
+        style={Styles.paragraph}
         keyboardType={'numeric'}
         value={dia_atual}
         onChangeText={dia_atual=>setDiaAtual(dia_atual)}/>
       <Button title='Calcular' onPress={calcularIdade} />
-      <Text style={Estilos.paragraph}>{idade ? `\nIdade gestacional: ${idade}`: ''}</Text>
+      <Text style={Styles.paragraph}>{idade ? `\nIdade gestacional: ${idade}`: ''}</Text>
     </View>
   )
 }
