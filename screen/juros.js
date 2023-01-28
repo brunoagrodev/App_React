@@ -29,6 +29,7 @@ export function Jur(){
         value={jur1}
         placeholder="Digite o valor em R$"
         keyboardType="numeric"
+        
       />
       <Br/>
       <TextInput

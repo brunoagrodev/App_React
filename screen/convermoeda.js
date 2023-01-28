@@ -42,7 +42,7 @@ export function ConversorMoedas(){
       title='Somar'
       onPress={Somar}
       />
-      <Text style={Styles.paragraph, {fontSize: 15, textAlign: 'center'}}> <Br/>{result ? 'o resultado é R$ ' + result : ''}</Text>
+      <Text style={Styles.paragraph, {fontSize: 15, textAlign: 'center', fontWeight: 600}}> <Br/>{result ? 'o resultado é R$ ' + result : ''}</Text>
     </SafeAreaView>
     </View>
   )

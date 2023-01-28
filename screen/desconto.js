@@ -46,7 +46,7 @@ export function Desconto(){
       onPress={CalcDes}
       />
       
-      <Text style={Styles.paragraph, {fontSize: 15, textAlign: 'center', fontWeight: 600}}> <Br/>{ desRes ? 'O valor do desconto é ' + desRes + ' \n O valor total é ' + (parseFloat(des1) - desRes) :''}</Text>
+      <Text style={Styles.paragraph, {fontSize: 15, textAlign: 'center', fontWeight: 600}}> <Br/>{ desRes ? 'O valor do desconto é ' + desRes + ' \n O valor total é ' + ((parseFloat(des1) - desRes).toFixed(2)) :''}</Text>
     </SafeAreaView>
     </View>
   )

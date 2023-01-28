@@ -4,17 +4,24 @@ import Constants from 'expo-constants';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Styles from './css/style'
-import {Br, Jur} from './screen/juros'
+import Triangulo from './screen/triangulo'
+import {Jur} from './screen/juros'
 import {Desconto} from './screen/desconto'
 import IdadeGestacional from './screen/idadeges'
 import {ConversorMoedas} from './screen/convermoeda'
 import {Etanol_Gasolina} from './screen/eta_gaso'
 
+export const Br  = ()=> <Text>{'\n'}</Text>
 
 function HomeScreen({ navigation }) {
   return (
     <View style={Styles.container}>
       <Text style={Styles.paragraph}>Funcionalidades</Text>
+       <Button
+        title="Triângulo"
+        onPress={() => navigation.navigate('Triângulo')}
+      />
+      <Br/>
       <Button
         title="Juros"
         onPress={() => navigation.navigate('Juros')}
@@ -49,6 +56,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Home">
           <Stack.Screen name="Home" component={HomeScreen}  options={{ title: 'Canivete XONG' }} />
+          <Stack.Screen name="Triângulo" component={Triangulo} options={{ title: 'Triângulo'}} />
           <Stack.Screen name="Juros" component={Jur} options={{ title: 'Juros'}} />
           <Stack.Screen name="Desconto" component={Desconto} options={{ title: 'Desconto'}} />
           <Stack.Screen name="Idade Gestacional" component={IdadeGestacional} options={{ title: 'Idade Gestacional'}} />
